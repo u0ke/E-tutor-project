@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tutor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme{
+             --color-dark-gray: #1D2026;
+             --color-gray-black: #8C94A3;
+             --color-gray-white: #FFFFFF;
+             --color-gray:#E9EAF0;
+             --color-black: #1D2026;
+             --color-oronge-primary: #FFEEE8;
+             --color-oronge: #FF6636;
+             --color-gray-700: #4E5566;
+             --color-oronge-700: #993D20;
+             --color-secondary: #EBEBFF;
+             --color-success: #E1F7E3;
+             --color-warning: #FFF2E5;
+             --color-error: #FFF0F0; 
+             --color-gray-50: #F5F7FA;
+             --color-warning-800: #65390C;
+             --color-gray-400: #A1A5B3;
+             --color-blue: #342F98;
+             --color-green: #882929;
+             --color-gray-600:#6E7485;
+             /* fonts */
+              --font-inter: "Inter", sans-serif;
+            /* text size */
+            --text-4xl: 40px;
+            --text-4xl-line-height: 48px;
+            --text-3xl: 32px;
+            --text-3xl-line-height: 124%;
+            --text-base:16px;
+            --text-base-line-height: 48px;
+            --text-7xl:72px;
+            --text-7xl-line-height: 74px; 
+            --text-2xl: 24px;
+            --text-2xl-line-height: 32px;
+            --text-xs:10px;
+            --text-xs-line-height: 12px;
+            --text-xl: 32px;
+            --text-xl-line-height: 40px;
+             
+        }
+         .div-hero{
+            @apply flex justify-between bg-dark-gray text-white
+        }
+        .nav{
+            @apply flex gap-[8px] text-gray-black font-inter font-medium text-sm pl-[32px]
+        }
+        .home-1{
+            @apply text-gray-white p-[16px]
+        }
+        .header{
+            @apply px-[32px] my-[24px] flex justify-between
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .div-header{
+            @apply flex  w-full
+        }
+        .button{
+            @apply  px-[24px] h-[48px] text-base font-semibold tracking-[-0.8%] font-inter
+        }
+        .div-input{
+            @apply flex items-center gap-[40px] 
+        }
+        .h1{
+            @apply text-3xl font-semibold tracking-[-3%] text-black font-inter pl-[8px] pr-[50px]
+        }
+        .h2{
+            @apply text-dark-gray font-inter font-semibold text-[48px] leading-[52px] tracking-[-2%] pb-[32px] pt-[16px]
+        }
+        .h3{
+            @apply font-inter font-semibold text-[32px] leading-[40px] tracking-[-1%] text-dark-gray
+        }
+        .h5{
+            @apply text-[16px] font-inter text-dark-gray leading-[22px] font-medium
+            }
+        .p{
+            @apply font-normal font-inter text-[20px] leading-[32px] text-gray-600
+        }    
+        .span{
+            @apply text-dark-gray text-[14px] leading-[20px] font-medium px-[12px] py-[6px] tracking-[-1%] font-inter whitespace-nowrap
+        }
+        .span-1{
+          @apply text-oronge text-[14px] leading-[20px] font-medium px-[12px] py-[6px] tracking-[-1%] font-inter whitespace-nowrap
+        } 
+        .span-2{
+            @apply text-gray text-[80px] font-inter font-semibold leading-[80px] tracking-[-2%]
+        } 
+        .div-section-2{
+            @apply flex items-center justify-between max-w-6xl mx-auto px-4 gap-16
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="div-hero">
+        <nav class="nav">
+            <a href="./index.html" class="home-1 focus:border-t-2 focus:border-orange-500">Home</a>
+            <a href="#Courses" class="p-[16px]  focus:border-t-2 focus:border-orange-500">Courses</a>
+            <a href="./main.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">About</a>
+            <a href="./contact.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">Contact</a>
+            <a href="#Instructor" class="p-[16px] focus:border-t-2 focus:border-orange-500">Become an Instructor</a>
+        </nav>
+        <div class="div-bar">
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>USD</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>English</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="div-header">
+            <div class="flex items-center">
+                <img src="./images/logo.png" alt="Logo">
+                <h1 class="h1">E-tutor</h1>
+            </div>
+            <div class="div-input">
+                <div class="relative w-[200px]">
+                    <!-- Input -->
+                    <input type="text" value="Browse" readonly
+                        class="border border-gray bg-gray-white h-[48px] px-5 py-[12px] text-gray-600 cursor-pointer" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 ">
+                        <img src="./images/Vector(1).png" alt="Vector">
+                    </span>
+                </div>
+                <div class="flex gap-8">
+                    <div class="relative">
+                        <img src="./images/Searsh.png" alt="img-searsh"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[17px]" />
+                        <!-- Input -->
+                        <input type="text" placeholder="What do you want learn..."
+                            class="radius-[6px] w-[424px] h-[48px] border  border-gray py-2 pl-10 pr-3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center gap-[24px]">
+            <div class="flex gap-[24px]">
+                <img src="./images/icon-1.png" class="w-[24px] h-[24px]" alt="icon-1">
+                <img src="./images/icon-2.png" class="w-[24px] h-[24px]" alt="icon-2">
+                <img src="./images/icon-3.png" class="w-[24px] h-[24px]" alt="icon-3">
+            </div>
+            <div class="flex gap-[12px]">
+                <button
+                    class="button bg-oronge-primary text-oronge hover:bg-gray hover:text-oronge hover:cursor-pointer">Create
+                    Account</button>
+                <button
+                    class="button bg-oronge text-gray-white hover:bg-gray hover:text-oronge hover:cursor-pointer">Sign
+                    In</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bg-[#F5F7FA]">
+            <div class="text-center items-center pt-[40px]">
+                <span
+                    class="font-inter font-semibold text-[24px] leading-[32px] tracking-[-1%] text-dark-gray">About</span>
+            </div>
+            <div class="flex justify-center gap-[8px] py-[16px] items-center text-center">
+                <span class="text-gray-600 font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">Home</span>
+                <span class="text-gray-600 font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">/</span>
+                <span
+                    class="text-dark-gray font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">About</span>
+            </div>
+        </section>
+        <section class="container mx-auto py-20 border-b border-gray">
+            <div class="div-section-2">
+                <div class="max-w-md">
+                    <span class="span-2">
+                        2007–2021
+                    </span>
+                    <h2 class="h2">
+                        We share knowledge with the world
+                    </h2>
+
+                    <p class="p">
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent fermentum quam mauris.
+                        Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt at vitae nulla.
+                    </p>
+                </div>
+
+                <!-- Right Image -->
+                <div class="max-w-xl">
+                    <img src="./images/Images(1).png" class="w-full" alt="team">
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-white py-16">
+            <div class="mx-auto max-w-6xl px-4">
+                <div class="grid items-center gap-[80px] grid-cols-[320px_1fr]">
+                    <!-- Left text -->
+                    <div>
+                        <h2 class="text-[32px] font-semibold leading-[40px] tracking-[-1%] text-[#1D2026] ">
+                            We Just keep growing with 6.3k Companies
+                        </h2>
+                        <p class="mt-4 max-w-[300px] text-[14px] leading-[22px] text-[#6E7485]">
+                            Nullam egestas tellus at enim ornare tristique. Class aptent taciti sociosqu ad litora
+                            torquent
+                        </p>
+                    </div>
+                    <!-- Logo grid -->
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(3).png" alt="Netflix">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group.png" alt="youtub">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 5.png" alt="Google">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(4).png" alt="lenovo">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 6.png" alt="slack">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(5).png" alt="verizon">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 8.png" alt="lexmark">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 7.png" alt="microsoft">
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[80px]">
+                    <div class="flex justify-around">
+                        <div class="flex w-full  gap-[16px]">
+                            <div class="items-top">
+                                <img src="./images/Users.png" alt="icon-1">
+                            </div>
+                            <div>
+                                <h3 class="h3">67.1k</h3>
+                                <span
+                                    class="font-inter font-medium text-[14px] leading-[20px] tracking-[-1%] text-gray-700">Students</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full  gap-[16px] ">
+                            <div class="items-top">
+                                <img src="./images/Notebook.png" alt="icon-2">
+                            </div>
+                            <div>
+                                <h3 class="h3">26k</h3>
+                                <span
+                                    class="font-inter font-medium text-[14px] leading-[20px] tracking-[-1%] text-gray-700">Certified
+                                    Instructor</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full  gap-[16px]">
+                            <div class="items-top">
+                                <img src="./images/GlobeHemisphereWest.png" alt="icon-3">
+                            </div>
+                            <div>
+                                <h3 class="h3">72</h3>
+                                <span
+                                    class="font-inter font-medium text-[14px] leading-[20px] tracking-[-1%] text-gray-700">Country
+                                    Language</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full  gap-[16px]">
+                            <div class="items-top">
+                                <img src="./images/CircleWavyCheck.png" alt="icon-4">
+                            </div>
+                            <div>
+                                <h3 class="h3">99.9%</h3>
+                                <span
+                                    class="font-inter font-medium text-[14px] leading-[20px] tracking-[-1%] text-gray-700">Success
+                                    Rate</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full  gap-[16px]">
+                            <div class="items-top">
+                                <img src="./images/Stack.png" alt="icon-5">
+                            </div>
+                            <div>
+                                <h3 class="h3">57</h3>
+                                <span
+                                    class="font-inter font-medium text-[14px] leading-[20px] tracking-[-1%] text-gray-700">Trusted
+                                    Companies</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto bg-oronge-primary py-[83px]">
+            <div class="div-section-2">
+                <div class="">
+                    <img src="./images/two-business-partners-working-office 1.png" class="w-full" alt="team">
+                </div>
+                <div>
+                    <span class="text-oronge font-inter font-medium text-[16px] leading-[22px]">OUR ONE BILLION
+                        MISSION</span>
+                    <h2
+                        class="font-inter font-semibold text-[40px] leading-[48px] tracking-[-1%] text-dark-gray space-y-[8px] max-w-[500px]">
+                        Our one billion mission sounds bold, We agree.
+                    </h2>
+
+                    <p class="font-inter font-medium text-[16px] leading-[24px] text-gray-700 max-w-[580px]">"We cannot
+                        solve our problems with the same thinking we used when we created them."—Albert Einstein.
+                        Institutions are slow to change. Committees are where good ideas and innovative thinking go to
+                        die. Choose agility over dogma. Embrace and drive change. We need to wipe the slate clean and
+                        begin with bold, radical thinking.</p>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto py-20 border-b border-gray">
+            <div class="div-section-2">
+                <div class="max-w-md">
+                    <span class="text-oronge text-[16px] font-inter font-semibold leading-[80px] tracking-[-2%]">
+                        OUR GALLERY
+                    </span>
+                    <h2 class="h2">
+                        We share knowledge with the world
+                    </h2>
+
+                    <p class="p">
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent fermentum quam mauris.
+                        Fusce tempor et augue a aliquet. Donec non ipsum non risus egestas tincidunt at vitae nulla.
+                    </p>
+                </div>
+
+                <!-- Right Image -->
+                <div class="max-w-xl">
+                    <img src="./images/Images(1).png" class="w-full" alt="team">
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-[#F5F7FA] container mx-auto py-20 ">
+            <div class="div-section-2">
+                <div class=" items-center ">
+                    <span class="text-oronge text-[16px] font-inter font-medium leading-[22px]">
+                        OUR GALLERY
+                    </span>
+                    <h2
+                        class="text-dark-gray font-inter font-semibold text-[40px] leading-[40px] tracking-[-1%] pb-[32px] pt-[16px] max-w-[400px]">
+                        We’ve been here almost 17 years
+                    </h2>
+
+                    <p class="text-[16px] font-inter font-normal leading-[24px] text-gray-700 max-w-[400px] py -[24px]">
+                        Fusce lobortis leo augue, sit amet tristique nisi commodo in. Aliquam ac libero quis tellus
+                        venenatis imperdiet. Sed sed nunc libero. Curabitur in urna ligula. torquent per conubia nostra.
+                    </p>
+                    <button class="flex items-center text-center button bg-oronge mt-[24px]">Join our team
+                        <img src="./images/ArrowRight(4).png" alt="">
+                    </button>
+                </div>
+                <div class="max-w-xl">
+                    <img src="./images/Gallery.png" alt="team">
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto py-20">
+            <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card 1 -->
+                <div class="relative mx-auto max-w-[390px]">
+                    <!-- testimonial box -->
+                    <div class="relative bg-gray-100 px-8 pt-12 pb-16 text-center">
+                        <!-- top left quote -->
+                        <img src="./images/double_quotes_r 1.png" alt="quote icon" class="absolute left-6 top-6 w-8">
+
+                        <!-- text -->
+                        <p class="mx-auto max-w-[320px] text-[16px] leading-[26px] text-gray-700">
+                            Eduguard fit us like a glove. Their team curates fresh, up-to-date
+                            courses from their marketplace and makes them available to customers.
+                        </p>
+
+                        <!-- bottom right quote -->
+                        <img src="./images/double_quotes_r 2.png" alt="quote icon"
+                            class="absolute bottom-6 right-6 w-8">
+
+                        <!-- bottom pointer -->
+                        <div
+                            class="absolute left-1/2 top-full h-6 w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-gray-100">
+                        </div>
+                    </div>
+
+                    <!-- author info -->
+                    <div class="mt-8 text-center">
+                        <h4 class="pb-1 text-[16px] font-medium leading-[22px] text-gray-900">
+                            Sundar Pichai
+                        </h4>
+                        <p class="text-[14px] leading-[22px] text-gray-600">
+                            Chief Chairman of
+                            <a href="#" class="font-medium text-[#564FFD]">Google</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative mx-auto max-w-[390px]">
+                    <div class="relative bg-gray-100 px-8 pt-12 pb-16 text-center">
+                        <img src="./images/double_quotes_r 1.png" alt="quote icon" class="absolute left-6 top-6 w-8">
+
+                        <p class="mx-auto max-w-[320px] text-[16px] leading-[26px] text-gray-700">
+                            Eduguard responds to the needs of the business in an agile and global
+                            manner. It’s truly the best solution for our employees and their careers.
+                        </p>
+
+                        <img src="./images/double_quotes_r 2.png" alt="quote icon"
+                            class="absolute bottom-6 right-6 w-8">
+
+                        <div
+                            class="absolute left-1/2 top-full h-6 w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-gray-100">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <h4 class="pb-1 text-[16px] font-medium leading-[22px] text-gray-900">
+                            Satya Nadella
+                        </h4>
+                        <p class="text-[14px] leading-[22px] text-gray-600">
+                            CEO of
+                            <a href="#" class="font-medium text-[#564FFD]">Microsoft</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative mx-auto max-w-[390px]">
+                    <div class="relative bg-gray-100 px-8 pt-12 pb-16 text-center">
+                        <img src="./images/double_quotes_r 1.png" alt="quote icon" class="absolute left-6 top-6 w-8">
+
+                        <p class="mx-[60px] max-w-[320px] text-[16px] leading-[26px] text-gray-700">
+                            In total, it was a big success, I would get emails about what a fantastic
+                            resource it was.
+                        </p>
+
+                        <img src="./images/double_quotes_r 2.png" alt="quote icon"
+                            class="absolute bottom-6 right-6 w-8">
+
+                        <div
+                            class="absolute left-1/2 top-full h-6 w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-gray-100">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center">
+                        <h4 class="pb-1 text-[16px] font-medium leading-[22px] text-gray-900">
+                            Ted Sarandos
+                        </h4>
+                        <p class="text-[14px] leading-[22px] text-gray-600">
+                            Chief Executive Officer of
+                            <a href="#" class="font-medium text-[#564FFD]">Netflix</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#111827] text-white">
+        <div class="mx-auto max-w-6xl px-4">
+            <!-- Main footer -->
+            <div class="grid gap-10 border-b border-white/10 py-16 md:grid-cols-2 lg:grid-cols-5">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <img src="./images/logo.png" alt="logo" class="h-8 w-8 object-contain">
+                        <h3 class="text-[32px] font-semibold text-white">E-tutor</h3>
+                    </div>
+
+                    <p class="mt-5 max-w-[260px] text-[14px] leading-[22px] text-[#8C94A3]">
+                        Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec mattis odio at.
+                    </p>
+
+                    <!-- Social -->
+                    <div class="mt-6 flex gap-3">
+                        <a href="#facebook" class="flex h-[46px] w-[46px] items-center justify-center bg-white/10"><img
+                                src="./images/Frame 75.png" alt="Facebook"></a>
+                        <a href="#Instagram"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Instragarm.png" alt="Instagram"></a>
+                        <a href="#linkedin"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-[#FF6636] text-sm text-white"><img
+                                src="./images/Linkedin.png" alt="linkedin"></a>
+                        <a href="#X"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Twitter.png" alt="X"></a>
+                        <a href="#Youtub"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white">
+                            <img src="./images/Frame 74.png" alt="Youtub"></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Top 4 Category
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Development</a></li>
+                        <li><a href="#" class="hover:text-white">Finance & Accounting</a></li>
+                        <li><a href="#" class="hover:text-white">Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Quick Links
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li class="flex justify-between items-center gap-2 border-b border-[#FF6636] px-2 py-1">
+                            <a href="#" class="text-white">Become Instructor</a>
+                            <span><img src="./images/ArrowRight(1).png" alt="arrow-right"></span>
+                        </li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Support
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Condition</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- App buttons -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Download Our App
+                    </h4>
+
+                    <div class="mt-5 space-y-4">
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/apple 1.png" alt="apple" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">App Store</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/google-play-5 1.png" alt="playstore" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">Play Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom footer -->
+            <div class="flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+                <p class="text-[14px] text-[#8C94A3]">
+                    &copy; 2021 - Eduflex. Designed by Templatecookie. All rights reserved
+                </p>
+
+                <div
+                    class="flex items-center justify-between border border-white/10 px-4 py-3 text-[14px] text-[#8C94A3] md:w-[160px]">
+                    <span>English</span>
+                    <img src="./images/Vector(1).png" alt="vector">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
