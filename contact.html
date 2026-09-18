@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tutor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme{
+             --color-dark-gray: #1D2026;
+             --color-gray-black: #8C94A3;
+             --color-gray-white: #FFFFFF;
+             --color-gray:#E9EAF0;
+             --color-black: #1D2026;
+             --color-oronge-primary: #FFEEE8;
+             --color-oronge: #FF6636;
+             --color-gray-700: #4E5566;
+             --color-oronge-700: #993D20;
+             --color-secondary: #EBEBFF;
+             --color-success: #E1F7E3;
+             --color-warning: #FFF2E5;
+             --color-error: #FFF0F0; 
+             --color-gray-50: #F5F7FA;
+             --color-warning-800: #65390C;
+             --color-gray-400: #A1A5B3;
+             --color-blue: #342F98;
+             --color-green: #882929;
+             --color-gray-600:#6E7485;
+             /* fonts */
+              --font-inter: "Inter", sans-serif;
+            /* text size */
+         
+             
+        }
+         .div-hero{
+            @apply flex justify-between bg-dark-gray text-white
+        }
+        .nav{
+            @apply flex gap-[8px] text-gray-black font-inter font-medium text-sm pl-[32px]
+        }
+        .home-1{
+            @apply text-gray-white border-t-2 border-orange-500 p-[16px]
+        }
+        header{
+            @apply px-[32px] my-[24px] flex justify-between
+        }
+        .div-input{
+            @apply flex items-center pl-[50px] gap-[40px] 
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .div-header{
+            @apply flex
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .button{
+            @apply  px-[24px] h-[48px] text-base font-semibold tracking-[-0.8%] font-inter
+        }
+        .h1{
+            @apply text-3xl font-semibold tracking-[-3%] text-black font-inter pl-[8px] pr-[50px]
+        }
+        .h2{
+            @apply text-dark-gray font-inter font-semibold text-[48px] leading-[52px] tracking-[-2%] pb-[24px]
+        }
+        .div-section-2{
+            @apply flex items-center justify-between max-w-6xl mx-auto px-4 gap-16
+        } 
+        
+    </style>
+</head>
+
+<body>
+    <div class="div-hero">
+       <nav class="nav">
+            <a href="./index.html" class="home-1 focus:border-t-2 focus:border-orange-500">Home</a>
+            <a href="./category.html" class="p-[16px]  focus:border-t-2 focus:border-orange-500">Courses</a>
+            <a href="./main.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">About</a>
+            <a href="./contact.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">Contact</a>
+            <a href="#Instructor" class="p-[16px] focus:border-t-2 focus:border-orange-500">Become an Instructor</a>
+        </nav>
+        <div class="div-bar">
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>USD</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>English</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="div-header">
+            <div class="flex items-center">
+                <img src="./images/logo.png" alt="Logo">
+                <h1 class="h1">E-tutor</h1>
+            </div>
+            <div class="div-input">
+                <div class="relative w-[200px]">
+                    <!-- Input -->
+                    <input type="text" value="Browse" readonly
+                        class="border border-gray bg-gray-white h-[48px] px-5 py-[12px] text-gray-600 cursor-pointer" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 ">
+                        <img src="./images/Vector(1).png" alt="Vector">
+                    </span>
+                </div>
+                <div class="flex gap-8">
+                    <div class="relative">
+                        <img src="./images/Searsh.png" alt="img-searsh"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[17px]" />
+                        <!-- Input -->
+                        <input type="text" placeholder="What do you want learn..."
+                            class="radius-[6px] w-[424px] h-[48px] border  border-gray py-2 pl-10 pr-3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center gap-[24px]">
+            <div class="flex gap-[24px]">
+                <img src="./images/icon-1.png" class="w-[24px] h-[24px]" alt="icon-1">
+                <img src="./images/icon-2.png" class="w-[24px] h-[24px]" alt="icon-2">
+                <img src="./images/icon-3.png" class="w-[24px] h-[24px]" alt="icon-3">
+            </div>
+            <div class="flex gap-[12px]">
+                <button
+                    class="button bg-oronge-primary text-oronge hover:bg-gray hover:text-oronge hover:cursor-pointer">Create
+                    Account</button>
+                <button
+                    class="button bg-oronge text-gray-white hover:bg-gray hover:text-oronge hover:cursor-pointer">Sign
+                    In</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bg-[#F5F7FA]">
+            <div class="text-center items-center pt-[40px]">
+                <span
+                    class="font-inter font-semibold text-[24px] leading-[32px] tracking-[-1%] text-dark-gray">Contact</span>
+            </div>
+            <div class="flex justify-center gap-[8px] py-[16px] items-center text-center">
+                <span class="text-gray-600 font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">Home</span>
+                <span class="text-gray-600 font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">/</span>
+                <span
+                    class="text-dark-gray font-inter font-normal text-[14px] leading-[22px] tracking-[-1%]">Contact</span>
+            </div>
+        </section>
+        <section class="container mx-auto py-20 border-b border-gray">
+            <div class="div-section-2">
+                <div>
+                    <h2 class="h2">
+                        Connect with us
+                    </h2>
+                    <p class="p">
+                        Want to chat? We’d love to hear from you! Get in touch with our Customer Success Team to inquire
+                        about speaking events, advertising rates, or just say hello.
+                    </p>
+                    <button
+                        class="mt-[24px] px-[24px] bg-oronge flex gap-[12px] text-white text-[16px] font-semibold font-inter leading-[48px] tracking-[-0.8%] items-center justify-center text-center">
+
+                        <img src="./images/Envelope.png" class="max-w-[24px]" alt="icon">
+                        Copy Email
+                    </button>
+                </div>
+
+                <!-- Right Image -->
+                <div class="max-w-xl">
+                    <img src="./images/Fit.png" class="w-full" alt="team">
+                </div>
+
+            </div>
+        </section>
+        <section class="container mx-auto py-20">
+            <div class="flex items-center justify-center">
+                <div class="items-center text-center space-y-[20px]">
+                    <h2 class="font-inter font-semibold text-[40px] leading-[48px] tracking-[-1%] text-dark-gray">Our
+                        branches all over the world.</h2>
+                    <p
+                        class="font-inter font-normal text-[18px] leading-[24px] tracking-[-1.5%] text-gray-700 max-w-[636px]">
+                        Phasellus sed quam eu eros faucibus cursus. Quisque mauris urna, imperdiet id leo quis, luctus
+                        auctor nisi. </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+        <section class="container mx-auto py-20 bg-[#F5F7FA]">
+            <!-- Title -->
+            <div class="text-center space-y-5">
+                <h2 class="font-inter font-semibold text-[40px] leading-[48px] text-dark-gray">
+                    Contact Us
+                </h2>
+            </div>
+            <div class="flex justify-around mx-auto max-w-[] mt-10 gap-10">
+                <div>
+                    <p class="text-[24px] leading-[32px] text-dark-gray max-w-[500px]">
+                        Will you be in Los Angeles or any other branches any time soon?
+                        Stop by the office! We'd love to meet.
+                    </p>
+                    <!-- INFO -->
+                    <div class="mt-6">
+
+                        <!-- ADDRESS -->
+                        <div class="flex gap-6 py-6 border-b border-gray">
+                            <h4 class="w-[40%] text-oronge text-[16px] font-medium">
+                                ADDRESS
+                            </h4>
+                            <div>
+                                <p class="text-dark-gray text-[16px] leading-[24px]">
+                                    1702 Olympic Boulevard
+                                </p>
+                                <p>Santa Monica, CA 90404</p>
+                            </div>
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="flex gap-6 py-6 border-b border-gray">
+                            <h4 class="w-[40%] text-oronge text-[16px] font-medium">
+                                PHONE NUMBER
+                            </h4>
+                            <div>
+                                <p class="text-dark-gray">(480) 555-0103</p>
+                                <p>(219) 555-0114</p>
+                            </div>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="flex gap-6 py-6">
+                            <h4 class="w-[40%] text-oronge text-[16px] font-medium">
+                                EMAIL ADDRESS
+                            </h4>
+                            <div>
+                                <p class="text-dark-gray">help.eduguard@gmail.com</p>
+                                <p>career.eduguard@gmail.com</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bg-white p-[40px]">
+                    <h5 class="font-inter font-normal text-dark-gray text-[24px] leading-[32px]">Get In Touch</h5>
+                    <p class="font-inter font-normal text-gray-black text-[16px] leading-[24px] pt-[12px] pb-[32px]">
+                        Feel free contact with us, we love to make new partners & friends</p>
+                    <form class="space-y-4">
+                        <div class="flex gap-[16px]">
+                            <label for="name">
+                                First Name <br>
+                                <input type="text" name="name" id="userName" placeholder="First name..."
+                                    class="border border-gray py-[13px] mt-[6px] pl-[14px] pr-[128px]">
+                            </label>
+                            <label for="name">
+                                Last Name <br>
+                                <input type="text" name="name" id="userName" placeholder="Last name..."
+                                    class="border border-gray py-[13px] pl-[14px] mt-[6px] pr-[128px]">
+                            </label>
+                        </div>
+                        <label for="name">
+                            Email<br>
+                            <input type="text" name="name" id="userName" placeholder="Email Address"
+                                class="border border-gray py-[13px] pl-[14px] mt-[6px] w-full">
+                        </label> <br>
+                        <label for="name">
+                            Subject<br>
+                            <input type="text" name="name" id="userName" placeholder="Message Subject"
+                                class="border border-gray py-[13px] pl-[14px] mt-[6px] w-full">
+                        </label>
+                        <label for="name">
+                            Message</label>
+                        <textarea type="text" name="name" id="userName" placeholder="Message Subject"
+                            class="border border-gray py-[13px] pl-[14px] mt-[6px] w-full"></textarea>
+                        <button>
+
+                            <img src="./images/Vector(6).png" alt="">
+                        </button>
+                        <button
+                            class="mt-[24px] px-[24px] bg-oronge flex gap-[12px] text-white text-[16px] font-semibold font-inter leading-[48px] tracking-[-0.8%] items-center justify-center text-center">
+                            Copy Email
+                            <img src="./images/PaperPlaneRight.png" alt="icon">
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="container mx-auto pt-[80px]">
+            <img src="./images/Rectangle 36.png" alt="maps-img">
+        </section>
+    </main>
+    <footer class="bg-[#111827] text-white">
+        <div class="mx-auto max-w-6xl px-4">
+            <!-- Main footer -->
+            <div class="grid gap-10 border-b border-white/10 py-16 grid-cols-5">
+
+                <!-- Brand -->
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3">
+                        <img src="./images/logo.png" alt="Logo">
+                        <h1 class="text-[36.8px] text-white font-inter font-semibold leading-[124%]">E-tutor</h1>
+                    </div>
+
+                    <p class="mt-5 max-w-[260px] text-[14px] leading-[22px] text-[#8C94A3]">
+                        Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec mattis odio at.
+                    </p>
+
+                    <!-- Social -->
+                    <div class="mt-6 flex gap-3">
+                        <a href="#facebook" class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 hover:bg-white/5"><img
+                                src="./images/Frame 75.png" alt="Facebook"></a>
+                        <a href="#Instagram"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white hover:bg-white/5"><img
+                                src="./images/Instragarm.png" alt="Instagram"></a>
+                        <a href="#linkedin"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-[#FF6636] text-sm text-white hover:bg-white/5"><img
+                                src="./images/Linkedin.png" alt="linkedin"></a>
+                        <a href="#X"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white hover:bg-white/5"><img
+                                src="./images/Twitter.png" alt="X"></a>
+                        <a href="#Youtub"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white hover:bg-white/5">
+                            <img src="./images/Frame 74.png" alt="Youtub"></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Top 4 Category
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Development</a></li>
+                        <li><a href="#" class="hover:text-white">Finance & Accounting</a></li>
+                        <li><a href="#" class="hover:text-white">Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Quick Links
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li class="flex justify-between items-center gap-2 border-b border-[#FF6636] px-2 py-1">
+                            <a href="#" class="text-white">Become Instructor</a>
+                            <span><img src="./images/ArrowRight(1).png" alt="arrow-right"></span>
+                        </li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Support
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Condition</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- App buttons -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Download Our App
+                    </h4>
+
+                    <div class="mt-5 space-y-4">
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/apple 1.png" alt="apple" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">App Store</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/google-play-5 1.png" alt="playstore" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">Play Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom footer -->
+            <div class="flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+                <p class="text-[14px] text-[#8C94A3]">
+                    &copy; 2021 - Eduflex. Designed by Templatecookie. All rights reserved
+                </p>
+
+                <div
+                    class="flex items-center justify-between border border-white/10 px-4 py-3 text-[14px] text-[#8C94A3] md:w-[160px]">
+                    <span>English</span>
+                    <img src="./images/Vector(1).png" alt="vector">
+                </div>
+            </div>
+        </div>
+    </footer>
