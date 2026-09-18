@@ -100,12 +100,6 @@ The contact page includes:
 
 The website also includes a section promoting the ability to become an instructor.
 
-### 📱 App Download
-
-The footer contains download buttons for:
-
-* App Store
-* Google Play
 
 ## Technologies
 
