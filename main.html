@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tutor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme{
+             --color-dark-gray: #1D2026;
+             --color-gray-black: #8C94A3;
+             --color-gray-white: #FFFFFF;
+             --color-gray:#E9EAF0;
+             --color-black: #1D2026;
+             --color-oronge-primary: #FFEEE8;
+             --color-oronge: #FF6636;
+             --color-gray-700: #4E5566;
+             --color-oronge-700: #993D20;
+             --color-secondary: #EBEBFF;   
+             --color-success: #E1F7E3;
+             --color-warning: #FFF2E5;
+             --color-error: #FFF0F0; 
+             --color-gray-50: #F5F7FA;
+             --color-warning-800: #65390C;
+             --color-gray-400: #A1A5B3;
+             --color-blue: #342F98;
+             --color-green: #882929;
+             /* fonts */
+              --font-inter: "Inter", sans-serif;
+            /* text size */
+            --text-4xl: 40px;
+            --text-4xl-line-height: 48px;
+            --text-3xl: 32px;
+            --text-3xl-line-height: 124%;
+            --text-base:16px;
+            --text-base-line-height: 48px;
+            --text-7xl:72px;
+            --text-7xl-line-height: 74px; 
+            --text-2xl: 24px;
+            --text-2xl-line-height: 32px;
+            --text-xs:10px;
+            --text-xs-line-height: 12px;
+            --text-xl: 32px;
+            --text-xl-line-height: 40px;
+             
+        }
+         .div-hero{
+            @apply flex justify-between bg-dark-gray text-white
+        }
+        .nav{
+            @apply flex gap-[8px] text-gray-black font-inter font-medium text-sm pl-[32px]
+        }
+        .home-1{
+            @apply text-gray-white p-[16px]
+        }
+        header{
+            @apply px-[32px] my-[24px] flex justify-between
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .div-header{
+            @apply flex items-center justify-between gap-[16px]
+        }
+        .button{
+            @apply  px-[24px] h-[48px] text-base font-semibold tracking-[-0.8%] font-inter
+        }
+        .div-input{
+            @apply flex items-center gap-[40px] 
+        }
+        .h1{
+            @apply text-3xl font-semibold tracking-[-3%] text-black font-inter pl-[8px] pr-[50px]
+        }
+        .h5{
+            @apply text-[16px] font-inter text-dark-gray leading-[22px] font-medium
+            }
+        .span{
+            @apply text-dark-gray text-[14px] leading-[20px] font-medium px-[12px] py-[6px] tracking-[-1%] font-inter whitespace-nowrap
+        }
+        .span-1{
+          @apply text-oronge text-[14px] leading-[20px] font-medium px-[12px] py-[6px] tracking-[-1%] font-inter whitespace-nowrap
+        }   
+    </style>
+</head>
+
+<body>
+    <div class="div-hero">
+        <nav class="nav">
+            <a href="./index.html" class="home-1 focus:border-t-2 focus:border-orange-500">Home</a>
+            <a href="./category.html" class="p-[16px]  focus:border-t-2 focus:border-orange-500">Courses</a>
+            <a href="#main" class="p-[16px] focus:border-t-2 focus:border-orange-500">About</a>
+            <a href="./contact.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">Contact</a>
+            <a href="#Instructor" class="p-[16px] focus:border-t-2 focus:border-orange-500">Become an Instructor</a>
+        </nav>
+        <div class="div-bar">
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>USD</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>English</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="div-header">
+            <div class="flex items-center">
+                <img src="./images/logo.png" alt="Logo">
+                <h1 class="h1">E-tutor</h1>
+            </div>
+            <div class="div-input">
+                <div class="relative w-[200px]">
+                    <!-- Input -->
+                    <input type="text" value="Browse" readonly
+                        class="border border-gray bg-gray-white h-[48px] px-5 py-[12px] text-gray-600 cursor-pointer" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 ">
+                        <img src="./images/Vector(1).png" alt="Vector">
+                    </span>
+                </div>
+                <div class="flex gap-8">
+                    <div class="relative">
+                        <img src="./images/Searsh.png" alt="img-searsh"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[17px]" />
+                        <!-- Input -->
+                        <input type="text" placeholder="What do you want learn..."
+                            class="radius-[6px] w-[424px] h-[48px] border  border-gray py-2 pl-10 pr-3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center gap-[24px]">
+            <div class="flex gap-[24px]">
+                <img src="./images/icon-1.png" class="w-[24px] h-[24px]" alt="icon-1">
+                <img src="./images/icon-2.png" class="w-[24px] h-[24px]" alt="icon-2">
+                <img src="./images/icon-3.png" class="w-[24px] h-[24px]" alt="icon-3">
+            </div>
+            <div class="flex gap-[12px]">
+                <button
+                    class="button bg-oronge-primary text-oronge hover:bg-gray hover:text-oronge hover:cursor-pointer">Create
+                    Account</button>
+                <button
+                    class="button bg-oronge text-gray-white hover:bg-gray hover:text-oronge hover:cursor-pointer">Sign
+                    In</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="space-y-[25px]">
+            <div class="mx-auto max-w-6xl px-4">
+                <h2 class="pt-[80px] text-center text-4xl font-semibold text-slate-900">
+                    Best selling courses in Web Development
+                </h2>
+                <div class="grid grid-cols-5 gap-6 pt-[40px]">
+                    <!-- card 1 -->
+                    <div class="space-y-[15px] bg-white border border-gray">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images.png" alt="image-card-1" />
+                        </div>
+                        <div>
+                            <div class="mx-[14px] space-y-[14px] text-center font-semibold text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="bg-warning px-[6px] py-[4px] text-xs text-orange-700">Design</span>
+                                    <span class="text-orange-500">$57</span>
+                                </div>
+                                <div>
+                                    <p class="max-w-[450px] text-start">
+                                        Machine Learning A-Z™: Hands-On Python &amp; R In Data...
+                                    </p>
+                                </div>
+                                <div class="flex justify-between border-t border-gray-300 text-sm text-slate-500">
+                                    <div class="my-[14px] flex gap-3">
+                                        <img src="./images/Vector(2).png" alt="vector-star" />
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="space-y-[15px] bg-white border border-gray">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(1).png" alt="image-card-2" />
+                        </div>
+                        <div>
+                            <div class="mx-[14px] space-y-[14px] text-center font-semibold text-slate-900">
+                                <div class="flex justify-between">
+                                    <span
+                                        class="bg-secondary px-[6px] py-[4px] text-xs text-blue-600">Developments</span>
+                                    <span class="text-orange-500">$57</span>
+                                </div>
+                                <div>
+                                    <p class="max-w-[450px] text-start">
+                                        Machine Learning A-Z™: Hands-On Python &amp; R In Data...
+                                    </p>
+                                </div>
+                                <div class="flex justify-between border-t border-gray-300 text-sm text-slate-500">
+                                    <div class="my-[14px] flex gap-3">
+                                        <img src="./images/Vector(2).png" alt="vector-star" />
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(2).png" alt="image-card-3" />
+                        </div>
+                        <div>
+                            <div class="mx-[14px] space-y-[14px] text-center font-semibold text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="bg-success px-[6px] py-[4px] text-xs text-[#15711F]">Business</span>
+                                    <span class="text-orange-500">$57</span>
+                                </div>
+                                <div>
+                                    <p class="max-w-[450px] text-start">
+                                        Machine Learning A-Z™: Hands-On Python &amp; R In Data...
+                                    </p>
+                                </div>
+                                <div class="flex justify-between border-t border-gray-300 text-sm text-slate-500">
+                                    <div class="my-[14px] flex gap-3">
+                                        <img src="./images/Vector(2).png" alt="vector-star" />
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="space-y-[15px] border border-gray bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(3).png" alt="image-card-4" />
+                        </div>
+                        <div>
+                            <div class="mx-[14px] space-y-[14px] text-center font-semibold text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="bg-secondary px-[6px] py-[4px] text-xs text-blue-600">Marketing</span>
+                                    <span class="text-orange-500">$57</span>
+                                </div>
+                                <div>
+                                    <p class="max-w-[450px] text-start">
+                                        Machine Learning A-Z™: Hands-On Python &amp; R In Data...
+                                    </p>
+                                </div>
+                                <div class="flex justify-between border-t border-gray-300 text-sm text-slate-500">
+                                    <div class="my-[14px] flex gap-3">
+                                        <img src="./images/Vector(2).png" alt="vector-star" />
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="space-y-[15px] border border-gray bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(4).png" alt="image-card-5" />
+                        </div>
+                        <div>
+                            <div class="mx-[14px] space-y-[14px] text-center font-semibold text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="bg-red-100 px-[6px] py-[4px] text-xs text-orange-700">IT &amp;
+                                        Software</span>
+                                    <span class="text-orange-500">$57</span>
+                                </div>
+                                <div>
+                                    <p class="max-w-[450px] text-start">
+                                        Machine Learning A-Z™: Hands-On Python &amp; R In Data...
+                                    </p>
+                                </div>
+                                <div class="flex justify-between border-t border-gray-300 text-sm text-slate-500">
+                                    <div class="my-[14px] flex gap-3">
+                                        <img src="./images/Vector(2).png" alt="vector-star" />
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-0 mx-auto py-[80px]">
+            <div class="mx-auto max-w-6xl px-4">
+                <div class="flex justify-between">
+                    <div class="items-center">
+                        <h2 class="text-[24px] font-inter font-semibold tracking-[-1%] text-dark-gray leading-[32px]">
+                            Popular tools</h2>
+                    </div>
+                    <div class="flex text-center items-center gap-[12px]">
+                        <img src="./images/ArrowLeft.png" alt="arrow-left">
+                        <img src="./images/ArrowRight(2).png" alt="arrow-right">
+                    </div>
+                </div>
+                <div class="grid grid-cols-6 gap-[24px] mx-auto max-w-6xl my-[24px]">
+                    <div class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px]">
+                        <h5 class="h5 text-dark-gray">HTML 5</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">2,736
+                            Courses</span>
+                    </div>
+                    <div class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px]">
+                        <h5 class="h5 text-dark-gray">CSS 3</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">13,932
+                            Courses</span>
+                    </div>
+                    <div class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px]">
+                        <h5 class="h5 text-dark-gray">Javascript</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">52,822
+                            Courses</span>
+                    </div>
+                    <div class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px]">
+                        <h5 class="h5 text-dark-gray">Saas</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">20,126
+                            Courses</span>
+                    </div>
+                    <div
+                        class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px] shadow-[0_12px_32px_0_rgba(29,32,38,0.1)]">
+                        <h5 class="h5 text-oronge">Laravel</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">6,196
+                            Courses</span>
+                    </div>
+                    <div class="bg-white border-1 border-gray p-[24px] text-center items-center space-y-[8px]">
+                        <h5 class="h5 text-dark-gray">Django</h5>
+                        <span class="font-inter text-[12px] text-gray-black font-normal leading-[16px]">22,649
+                            Courses</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-[12px] px-4 mx-auto max-w-6xl my-[24px]">
+                <h5 class="text-[16px] font-inter text-dark-gray leading-[22px] font-medium">Popular keyword:</h5>
+                <span class="span bg-gray-100">HTLM 5</span>
+                <span class="span bg-gray-100">Web Development</span>
+                <span class="span bg-gray-100">Responsive Developments</span>
+                <span
+                    class="text-sm font-normal px-[12px] py-[6px] bg-oronge text-white tracking-[-1%] font-inter">Developments</span>
+                <span class="span bg-gray-100">Programing</span>
+                <span class="span bg-gray-100">Website</span>
+                <span class="span bg-gray-100">Technology</span>
+                <span class="span bg-gray-100">Wordpressj</span>
+            </div>
+            </div>
+        </section>
+        <section class="container my-[0] mx-auto py-[80px]  bg-[#F5F7FA]">
+            <div class="mx-auto max-w-6xl px-4">
+                <div class="mx-auto max-w-[1200px] py-[60px]">
+                    <div class="pb-[40px] text-center">
+                        <h2 class="text-[40px] font-semibold text-black">
+                            Top instructor of the month
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-5 gap-6 px-[60px]">
+                        <div class="rounded-[10px] border border-gray-200 bg-white shadow-sm">
+                            <img src="./images/Image.png" alt="image-card-1" class="w-full object-cover" />
+
+                            <div class="mt-4 text-center">
+                                <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                                <span class="text-[14px] font-normal text-[#8C94A3]">Senior Developer</span>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between border-t pt-4 text-sm text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" alt="vector-star" />
+                                    <span>4.6</span>
+                                </div>
+                                <span class="whitespace-nowrap">854 students</span>
+                            </div>
+                        </div>
+
+                        <div class="rounded-[10px] border border-gray-200 bg-white shadow-sm">
+                            <img src="./images/Image(1).png" alt="course image" class="h-auto w-full object-cover" />
+
+                            <div class="mt-4 text-center">
+                                <h6 class="text-[20px] font-semibold text-[#1D2026]">Darrell Steward</h6>
+                                <span class="text-[14px] font-normal text-[#8C94A3]">Digital Product Designer</span>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between border-t pt-4 text-sm text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" alt="vector-star" />
+                                    <span>4.9</span>
+                                </div>
+                                <span class="whitespace-nowrap">451,444 students</span>
+                            </div>
+                        </div>
+
+                        <div class="rounded-[10px] border border-gray-200 bg-white shadow-sm">
+                            <img src="./images/Image(2).png" alt="course image" class="h-auto w-full object-cover" />
+
+                            <div class="mt-4 text-center">
+                                <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                                <span class="text-[14px] font-normal text-[#8C94A3]">Senior Developer</span>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between border-t pt-4 text-sm text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" alt="vector-star" />
+                                    <span>4.6</span>
+                                </div>
+                                <span class="whitespace-nowrap">854 students</span>
+                            </div>
+                        </div>
+
+                        <div class="rounded-[10px] border border-gray-200 bg-white shadow-sm">
+                            <img src="./images/Image(3).png" alt="course image" class="h-auto w-full object-cover" />
+
+                            <div class="mt-4 text-center">
+                                <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                                <span class="text-[14px] font-normal text-[#8C94A3]">Senior Developer</span>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between border-t pt-4 text-sm text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" alt="vector-star" />
+                                    <span>4.6</span>
+                                </div>
+                                <span class="whitespace-nowrap">854 students</span>
+                            </div>
+                        </div>
+
+                        <div class="rounded-[10px] border border-gray-200 bg-white shadow-sm">
+                            <img src="./images/Image(4).png" alt="image-course" class="h-auto w-full object-cover" />
+
+                            <div class="mt-4 text-center">
+                                <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                                <span class="text-[14px] font-normal text-[#8C94A3]">Senior Developer</span>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between border-t pt-4 text-sm text-slate-500">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" alt="vector-star" />
+                                    <span>4.6</span>
+                                </div>
+                                <span class="whitespace-nowrap">854 students</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-[45px] flex items-center justify-center gap-2 text-center text-sm">
+                        <span class="text-slate-500">
+                            Thousands of students waiting for a instructor. Start teaching &amp; earning now!.
+                        </span>
+                        <a href="#" class="font-semibold text-orange-500 hover:text-orange-600">
+                            Become Instructor
+                        </a>
+                        <img src="./images/ArrowRight.png" alt="right-button" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container my-[0] mx-auto py-[80px]">
+            <div class="flex justify-between mx-auto max-w-6xl px-4">
+                <div class="flex gap-[24px] items-center">
+                    <div class="flex gap-8">
+                        <div class="relative">
+                            <img src="./images/Faders.png" alt="img-filter"
+                                class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[18px]" />
+                            <button
+                                class="flex items-center radius-[6px] w-[120px] h-[48px] border border-gray py-2 pl-10 pr-3 text-sm">
+                                Filter
+                            </button>
+
+                            <span
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-xs bg-red-100 text-red-500 px-2 py-[2px] rounded">
+                                3
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex gap-8">
+                        <div class="relative">
+                            <img src="./images/Searsh.png" alt="img-searsh"
+                                class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[17px]" />
+                            <!-- Input -->
+                            <input type="text" placeholder="UI/UX Design"
+                                class="radius-[6px] w-[424px] h-[48px] border border-gray py-2 pl-10 pr-3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-[24px] items-center text-center">
+                    <span>Sort by:</span>
+                    <div class="relative w-[200px]">
+                        <!-- Input -->
+                        <input type="text" placeholder="Trending" readonly
+                            class="border border-gray bg-gray-white h-[48px] px-5 py-[12px] text-gray-600 cursor-pointer" />
+                        <span class="absolute right-4 top-1/2 -translate-y-1/2 ">
+                            <img src="./images/ChevronDown.png" alt="Vector">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex justify-between items-center gap-[12px] px-4 py-[24px] mx-auto max-w-6xl my-[24px] border-b border-gray">
+                <div class="">
+                    <span>Suggestion:</span>
+                    <span class="span-1">user interface</span>
+                    <span class="span-1">user experience</span>
+                    <span class="span-1">web design</span>
+                    <span class="span-1">interface</span>
+                    <span class="span-1">app</span>
+                </div>
+                <div>
+                    <span
+                        class="text-dark-gray leading-[20px] tracking-[-1%] text-[14px] font-inter font-medium">3,145,684
+                        &nbsp; <em
+                            class="text-gray-black leading-[22px] tracking-[-1%] text-[14px] font-inter font-normal">results
+                            find for “ui/ux design”</em></span>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 py-12">
+
+                <!-- GRID -->
+                <div class="grid gap-6 grid-cols-4">
+                    <!-- CARD 1 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(3).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-medium">
+                                    IT & Software
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$35</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Learn Python Programming Masterclass
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.0</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>265.7K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 2 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(13).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">
+                                    Development
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$49</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Complete Blender Creator
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.4</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>185K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 3 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(6).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-medium">
+                                    Business
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$32</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Adobe Premiere Pro Training
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.6</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>300K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 4 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(5).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium">
+                                    Design
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$13</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Ultimate AWS Certified Cloud
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.8</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>95K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 5 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(11).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 6 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(7).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 7 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(14).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 8 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(15).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 9 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(16).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 10 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(10).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 11 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(9).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 12 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(4).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 13 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images.png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 14 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(12).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 15 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(8).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 16 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(17).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 17 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(18).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 18 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(19).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 19 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(20).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 20 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(21).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 21 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(22).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 22 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(23).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 23 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(24).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- CARD 24 -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="./images/Course Images(25).png" class="w-full h-40 object-cover">
+
+                        <div class="p-4 space-y-3">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-medium">
+                                    Marketing
+                                </span>
+
+                                <span class="text-orange-500 font-semibold">$29</span>
+                            </div>
+
+                            <h3 class="text-sm font-semibold text-gray-900">
+                                Digital Marketing Complete Course
+                            </h3>
+
+                            <div class="flex justify-between items-center border-t pt-3 text-sm text-gray-500">
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/Vector(2).png" class="w-4 h-4">
+                                    <span>4.5</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/User(1).png" class="w-4 h-4">
+                                    <span>210K students</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-[16px] justify-center mt-[40px] items-center">
+                    <button
+                        class="hover:bg-gray hover:w-10 hover:h-10 hover:inline-flex hover:items-center hover:justify-center hover:rounded-full hover:cursor-pointer">
+                        <img src="./images/ArrowLeft(1).png" alt="left-icon">
+                    </button>
+                    <div class="flex gap-4 items-center">
+
+                        <span
+                            class="font-inter text-dark-gray text-[14px] leading-[20px] tracking-[-1%] font-medium hover:bg-gray hover:w-10 hover:h-10 hover:inline-flex hover:items-center hover:justify-center hover:rounded-full hover:cursor-pointer">01</span>
+
+                        <span
+                            class="w-10 h-10 inline-flex items-center justify-center bg-oronge text-white rounded-full font-inter text-[14px] leading-[20px] tracking-[-1%] font-medium hover:bg-gray hover:cursor-pointer">02</span>
+
+                        <span
+                            class="font-inter text-dark-gray text-[14px] leading-[20px] tracking-[-1%] font-medium hover:bg-gray hover:w-10 hover:h-10 hover:inline-flex hover:items-center hover:justify-center hover:rounded-full hover:cursor-pointer">03</span>
+
+                        <span class="w-10 h-10 inline-flex items-center justify-center bg-oronge-primary text-oronge rounded-full font-inter text-[14px] leading-[20px] tracking-[-1%] font-medium hover:bg-gray
+                            hover:cursor-pointer">04
+                        </span>
+                        <span
+                            class="font-inter text-dark-gray text-[14px] leading-[20px] tracking-[-1%] font-medium hover:bg-gray hover:w-10 hover:h-10 hover:inline-flex hover:items-center hover:justify-center hover:rounded-full hover:cursor-pointer">05</span>
+
+                    </div>
+                    <button
+                        class="w-10 h-10 inline-flex items-center justify-center bg-oronge-primary text-oronge rounded-full hover:bg-gray hover:cursor-pointer">
+                        <img src="./images/ArrowRight(3).png" alt="right-icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#111827] text-white">
+        <div class="mx-auto max-w-6xl px-4">
+
+            <!-- Top CTA -->
+            <div class="grid gap-10 border-b border-white/10 py-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+
+                <div>
+                    <h2
+                        class="max-w-[524px] text-[40px] font-semibold font-inter leading-[48px] tracking-[-1%] text-[#FFFFFF]">
+                        Start learning with 67.1k students around the world.
+                    </h2>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <button
+                            class="bg-[#FF6636] px-[24px] py-4 text-[16px] leading-[-0.8%] tracking-[-0.8%] font-semibold text-white">
+                            Join The Family
+                        </button>
+
+                        <button class="bg-white/10 px-6 py-4 text-[16px] font-semibold text-white">
+                            Browse All Courses
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">6.3k</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Online courses</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">26k</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Certified Instructor</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">99.9%</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main footer -->
+            <div class="grid gap-10 border-b border-white/10 py-16 md:grid-cols-2 lg:grid-cols-5">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <img src="./images/logo.png" alt="logo" class="h-8 w-8 object-contain">
+                        <h3 class="text-[32px] font-semibold text-white">E-tutor</h3>
+                    </div>
+
+                    <p class="mt-5 max-w-[260px] text-[14px] leading-[22px] text-[#8C94A3]">
+                        Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec mattis odio at.
+                    </p>
+
+                    <!-- Social -->
+                    <div class="mt-6 flex gap-3">
+                        <a href="#facebook" class="flex h-[46px] w-[46px] items-center justify-center bg-white/10"><img
+                                src="./images/Frame 75.png" alt="Facebook"></a>
+                        <a href="#Instagram"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Instragarm.png" alt="Instagram"></a>
+                        <a href="#linkedin"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-[#FF6636] text-sm text-white"><img
+                                src="./images/Linkedin.png" alt="linkedin"></a>
+                        <a href="#X"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Twitter.png" alt="X"></a>
+                        <a href="#Youtub"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white">
+                            <img src="./images/Frame 74.png" alt="Youtub"></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Top 4 Category
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Development</a></li>
+                        <li><a href="#" class="hover:text-white">Finance & Accounting</a></li>
+                        <li><a href="#" class="hover:text-white">Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Quick Links
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li class="flex justify-between items-center gap-2 border-b border-[#FF6636] px-2 py-1">
+                            <a href="#" class="text-white">Become Instructor</a>
+                            <span><img src="./images/ArrowRight(1).png" alt="arrow-right"></span>
+                        </li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Support
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Condition</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- App buttons -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Download Our App
+                    </h4>
+
+                    <div class="mt-5 space-y-4">
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/apple 1.png" alt="apple" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">App Store</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/google-play-5 1.png" alt="playstore" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">Play Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom footer -->
+            <div class="flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+                <p class="text-[14px] text-[#8C94A3]">
+                    &copy; 2021 - Eduflex. Designed by Templatecookie. All rights reserved
+                </p>
+
+                <div
+                    class="flex items-center justify-between border border-white/10 px-4 py-3 text-[14px] text-[#8C94A3] md:w-[160px]">
+                    <span>English</span>
+                    <img src="./images/Vector(1).png" alt="vector">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
