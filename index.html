@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Tutor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme{
+             --color-dark-gray: #1D2026;
+             --color-gray-black: #8C94A3;
+             --color-gray-white: #FFFFFF;
+             --color-gray:#E9EAF0;
+             --color-black: #1D2026;
+             --color-oronge-primary: #FFEEE8;
+             --color-oronge: #FF6636;
+             --color-gray-700: #4E5566;
+             --color-oronge-700: #993D20;
+             --color-secondary: #EBEBFF;   
+             --color-success: #E1F7E3;
+             --color-warning: #FFF2E5;
+             --color-error: #FFF0F0; 
+             --color-gray-50: #F5F7FA;
+             --color-warning-800: #65390C;
+             --color-gray-400: #A1A5B3;
+             --color-blue: #342F98;
+             --color-green: #882929;
+             /* fonts */
+              --font-inter: "Inter", sans-serif;
+            /* text size */
+            --text-3xl: 32px;
+            --text-3xl-line-height: 124%;
+            --text-base:16px;
+            --text-base-line-height: 48px;
+            --text-7xl:72px;
+            --text-7xl-line-height: 74px;
+            --text-2xl: 24px;
+            --text-2xl-line-height: 32px;
+            --text-xs:10px;
+            --text-xs-line-height: 12px;
+            --text-xl: 32px;
+            --text-xl-line-height: 40px;
+             
+        }
+        .div-hero{
+            @apply flex justify-between bg-dark-gray text-white
+        }
+        .nav{
+            @apply flex gap-[8px] text-gray-black font-inter font-medium text-sm pl-[32px]
+        }
+        .home-1{
+            @apply text-gray-white  p-[16px]
+        }
+        header{
+            @apply px-[32px] my-[24px] flex justify-between
+        }
+        .div-input{
+            @apply flex items-center pl-[50px] gap-[40px] 
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .div-header{
+            @apply flex items-center justify-between gap-[16px]
+        }
+        .div-bar{
+            @apply flex px-[32px] text-gray-black font-normal text-sm
+        }
+        .button{
+            @apply  px-[24px] h-[48px] text-base font-semibold tracking-[-0.8%] font-inter
+        }
+        .section{
+            @apply container my-[0px] mx-auto  bg-[#F5F7FA] py-2
+        }
+        .h1{
+            @apply text-3xl font-semibold tracking-[-3%] text-black font-inter pl-[8px] pr-[50px]
+        }
+        .h2{
+            @apply text-7xl max-w-[1024px] font-semibold font-inter tracking-[-2%] text-black
+        }
+        .p{
+           @apply font-inter font-normal text-2xl text-gray-700 my-[40px]
+        }
+        .span{
+            @apply px-[6px] py-[4px] font-inter text-xs font-medium
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-hero">
+        <nav class="nav">
+            <a href="#Home" class="home-1 focus:border-t-2 focus:border-orange-500">Home</a>
+            <a href="./category.html" class="p-[16px]  focus:border-t-2 focus:border-orange-500">Courses</a>
+            <a href="./main.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">About</a>
+            <a href="./contact.html" class="p-[16px] focus:border-t-2 focus:border-orange-500">Contact</a>
+            <a href="#Instructor" class="p-[16px] focus:border-t-2 focus:border-orange-500">Become an Instructor</a>
+        </nav>
+        <div class="div-bar">
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>USD</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+            <div class="flex gap-[6px] p-[16px] hover:bg-gray hover:text-oronge">
+                <span>English</span>
+                <span class="mt-[10px]">
+                    <img src="./images/Vector(1).png" alt="drop-down">
+                </span>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="div-header">
+            <div class="flex items-center">
+                <img src="./images/logo.png" alt="Logo">
+                <h1 class="h1">E-tutor</h1>
+            </div>
+            <div class="div-input">
+                <div class="relative w-[200px]">
+                    <!-- Input -->
+                    <input type="text" value="Browse" readonly
+                        class="border border-gray bg-gray-white h-[48px] px-5 py-[12px] text-gray-600 cursor-pointer" />
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 ">
+                        <img src="./images/Vector(1).png" alt="Vector">
+                    </span>
+                </div>
+                <div class="flex gap-8">
+                    <div class="relative">
+                        <img src="./images/Searsh.png" alt="img-searsh"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-[18px] h-[17px]" />
+                        <!-- Input -->
+                        <input type="text" placeholder="What do you want learn..."
+                            class="radius-[6px] w-[424px] h-[48px] border  border-gray py-2 pl-10 pr-3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center gap-[24px]">
+            <div class="flex gap-[24px]">
+                <img src="./images/icon-1.png" class="w-[24px] h-[24px]" alt="icon-1">
+                <img src="./images/icon-2.png" class="w-[24px] h-[24px]" alt="icon-2">
+                <img src="./images/icon-3.png" class="w-[24px] h-[24px]" alt="icon-3">
+            </div>
+            <div class="flex gap-[12px]">
+                <button
+                    class="button bg-oronge-primary text-oronge hover:bg-gray hover:text-oronge hover:cursor-pointer">Create
+                    Account</button>
+                <button
+                    class="button bg-oronge text-gray-white hover:bg-gray hover:text-oronge hover:cursor-pointer">Sign
+                    In</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <div class="flex">
+                <div class="bg-neutral-white py-[35px] px-[162px] items-center">
+                    <h2 class="h2">Learn with expert anytime anywhere</h2>
+                    <p class="p max-w-[600px]">Our mision is to help people to find the best course online and learn
+                        with expert anytime, anywhere.</p>
+                    <button class="button bg-oronge text-gray-white">Create Account</button>
+                </div>
+                <div>
+                    <img src="./images/Images.png" alt="image-section-1">
+                </div>
+            </div>
+        </section>
+        <section class="py-16">
+            <div class="mx-auto max-w-6xl px-4">
+                <!-- Title -->
+                <h2 class="text-center text-3xl font-extrabold text-slate-900">
+                    Browse top category
+                </h2>
+
+                <!-- Grid -->
+                <div class="mt-10 grid gap-6 grid-cols-4">
+                    <!-- Card -->
+                    <div class="flex items-center gap-4 bg-secondary px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/Cpu.png" class="h-6 w-6" alt="cpu-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Label</div>
+                            <div class="text-sm text-slate-500">63,476 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-success px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/Handshake.png" class="h-6 w-6" alt="Handshake-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Business</div>
+                            <div class="text-sm text-slate-500">52,822 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-warning px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/CreditCard.png" class="h-6 w-6" alt="credit-card-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Finance & Accounting</div>
+                            <div class="text-sm text-slate-500">33,841 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-error px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/ChartBarHorizontal.png" class="h-6 w-6" alt="chart-bar-horizontal-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">IT & Software</div>
+                            <div class="text-sm text-slate-500">22,649 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-gray-white px-6 py-5 shadow-sm ring-1 ring-slate-100">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-500">
+                            <img src="./images/BugDroid.png" class="h-6 w-6" alt="bug-droid-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Personal Development</div>
+                            <div class="text-sm text-slate-500">20,126 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-gray-50 px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/Receipt.png" class="h-6 w-6" alt="receipt-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Office Productivity</div>
+                            <div class="text-sm text-slate-500">13,932 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-secondary px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/MegaphoneSimple.png" class="h-6 w-6" alt="megaphone-simple-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Marketing</div>
+                            <div class="text-sm text-slate-500">12,068 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-gray-50 px-6 py-5 shadow-sm ring-1 ring-slate-100">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-lg bg-white ring-1 ring-slate-200">
+                            <img src="./images/Camera.png" class="h-6 w-6" alt="camera-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Photography & Video</div>
+                            <div class="text-sm text-slate-500">6,196 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-warning px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/Package.png" class="h-6 w-6" alt="package-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Lifestyle</div>
+                            <div class="text-sm text-slate-500">2,736 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-orange-primary px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/PenNib.png" class="h-6 w-6" alt="pen-nib-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Design</div>
+                            <div class="text-sm text-slate-500">2,600 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-success px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/FirstAidKit.png" class="h-6 w-6" alt="first-aid-kit-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Health & Fitness</div>
+                            <div class="text-sm text-slate-500">1,678 Courses</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4  bg-warning px-6 py-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
+                            <img src="./images/Headphones.png" class="h-6 w-6" alt="headphones-img">
+                        </div>
+                        <div>
+                            <div class="font-semibold text-slate-900">Music</div>
+                            <div class="text-sm text-slate-500">959 Courses</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-10 flex items-center text-center justify-center gap-2 text-sm">
+                    <span class="text-slate-500">We have more category & subcategory.</span>
+                    <a href="#" class="font-semibold text-orange-500 hover:text-orange-600">
+                        Browse All
+                    </a>
+                    <img src="./images/ArrowRight.png" alt="right-buton">
+                </div>
+        </section>
+        <section class="space-y-[25px] bg-[#F5F7FA] ">
+            <div class="mx-auto max-w-6xl px-4">
+                <!-- Title -->
+                <h2 class="text-center text-3xl font-extrabold text-slate-900 pt-[80px]">
+                    Best selling courses
+                </h2>
+                <!-- Grid -->
+                <div class="grid gap-6 grid-cols-5 pt-[40px] pb-[320px]">
+                    <!-- Card 1 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images.png" alt="image-card-1">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-warning text-oronge-700">Design</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="items-center space-y-[15px]  bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(1).png" alt="image-card-2">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-secondary text-blue">Developments</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="items-center space-y-[15px]  bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(2).png" alt="image-card-3">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-success text-[#15711F]">Business</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(3).png" alt="image-card-4">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-secondary text-blue">Marketing </span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(4).png" alt="image-card-5">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-error text-oronge-700">IT & Software</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(5).png " alt="image-card-6">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-warning text-warning-800">Music</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(6).png" alt="image-card-7">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-secondary text-blue">Marketing</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(7).png" alt="image-card-8">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-success text-[#15711F]">Health & Fitness</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(8).png" alt="image-card-9">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-oronge-primary text-oronge-700">Design</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="items-center space-y-[15px] bg-white">
+                        <div class="flex items-center justify-center rounded-lg">
+                            <img src="./images/Course Images(9).png" alt="image-card-10">
+                        </div>
+                        <div>
+                            <div class="mx-[14px] text-center font-semibold space-y-[14px] text-slate-900">
+                                <div class="flex justify-between">
+                                    <span class="span bg-warning text-warning-800">Design</span>
+                                    <span class="text-oronge">$57</span>
+                                </div>
+                                <div>
+                                    <p class="text-start max-w-[450px]">Machine Learning A-Z™: Hands-On Python & R In
+                                        Data...</p>
+                                </div>
+                                <div class="flex justify-between text-sm text-slate-500  border-t-1 border-gray">
+                                    <div class="flex gap-3 mt-[14px]">
+                                        <img src="./images/Vector(2).png" alt="vector-star">
+                                        <span>5.0</span>
+                                    </div>
+                                    <span class="mt-[14px]">265.7K students</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="container relative mx-auto py-[64px]">
+            <div
+                class="absolute top-[-200px] left-1/2 w-full max-w-5xl -translate-x-1/2 border border-gray-300 bg-white py-[60px]">
+
+                <!-- heading -->
+                <div class="flex items-start justify-between gap-10 px-[40px]">
+                    <h2 class="text-[40px] font-semibold text-black">
+                        Our feature courses
+                    </h2>
+
+                    <p class="max-w-[360px] text-[16px] leading-[24px] text-gray-700">
+                        Vestibulum sed dolor sed diam mollis maximus vel nec dolor.
+                        Donec varius purus et eleifend porta.
+                    </p>
+                </div>
+
+                <!-- cards -->
+                <div class="mt-10 grid grid-cols-2 gap-5 px-[40px]">
+
+                    <!-- card 1 -->
+                    <div class="overflow-hidden border border-gray-300 bg-white">
+                        <div class="flex">
+                            <div class="w-[170px] shrink-0">
+                                <img src="./images/Course Images(3).png" alt="course image"
+                                    class="h-full w-full object-cover">
+                            </div>
+
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="p-4">
+                                    <div class="flex items-start justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-[#E1F7E3] px-2 py-1 text-[10px] font-medium uppercase text-[#15711F]">
+                                            Health & Fitness
+                                        </span>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <span class="text-[16px] font-semibold text-[#1D2026]">$14.00</span>
+                                            <span class="text-[12px] text-[#A1A5B3] line-through">$26.00</span>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="mt-3 text-[15px] leading-[22px] text-[#1D2026]">
+                                        Investing In Stocks The Complete Course! (13 H...
+                                    </h3>
+
+                                    <div class="mt-3 flex items-center justify-between gap-3">
+                                        <div class="flex min-w-0 items-center gap-2">
+                                            <img src="./images/Photo.png" alt="author"
+                                                class="h-7 w-7 rounded-full object-cover">
+                                            <span class="whitespace-nowrap text-[13px] text-[#4E5566]">Kevin
+                                                Gilbert</span>
+                                        </div>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <img src="./images/Vector(2).png" alt="vector-star" class="h-4 w-4">
+                                            <span class="text-[13px] text-[#1D2026]">5.0</span>
+                                            <span class="text-[13px] text-[#8C94A3]">(357,914)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center gap-4 border-t border-[#E9EAF0] px-4 py-3 text-[13px] text-[#4E5566]">
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/User(1).png" alt="user icon" class="h-4 w-4">
+                                        <span>265.7K students</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/chart.png" alt="level icon" class="h-4 w-4">
+                                        <span>Beginner</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/Clock.png" alt="clock icon" class="h-4 w-4">
+                                        <span>6 hour</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="overflow-hidden border border-gray-300 bg-white">
+                        <div class="flex">
+                            <div class="w-[170px] shrink-0">
+                                <img src="./images/Course Images(4).png" alt="course image"
+                                    class="h-full w-full object-cover">
+                            </div>
+
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="p-4">
+                                    <div class="flex items-start justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-[#FFF0F0] px-2 py-1 text-[10px] font-medium uppercase text-[#E34444]">
+                                            Personal Development
+                                        </span>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <span class="text-[16px] font-semibold text-[#1D2026]">$14.00</span>
+                                            <span class="text-[12px] text-[#A1A5B3] line-through">$26.00</span>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="mt-3 text-[15px] leading-[22px] text-[#1D2026]">
+                                        Google Analytics Certification - Learn How To...
+                                    </h3>
+
+                                    <div class="mt-3 flex items-center justify-between gap-3">
+                                        <div class="flex min-w-0 items-center gap-2">
+                                            <img src="./images/Photo.png" alt="author"
+                                                class="h-7 w-7 rounded-full object-cover">
+                                            <span class="whitespace-nowrap text-[13px] text-[#4E5566]">Kevin
+                                                Gilbert</span>
+                                        </div>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <img src="./images/Vector(2).png" alt="star" class="h-4 w-4">
+                                            <span class="text-[13px] text-[#1D2026]">5.0</span>
+                                            <span class="text-[13px] text-[#8C94A3]">(357,914)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center gap-4 border-t border-[#E9EAF0] px-4 py-3 text-[13px] text-[#4E5566]">
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/User(1).png" alt="user icon" class="h-4 w-4">
+                                        <span>265.7K students</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/chart.png" alt="level icon" class="h-4 w-4">
+                                        <span>Beginner</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/Clock.png" alt="clock icon" class="h-4 w-4">
+                                        <span>6 hour</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="overflow-hidden border border-gray-300 bg-white">
+                        <div class="flex">
+                            <div class="w-[170px] shrink-0">
+                                <img src="./images/Course Images(5).png" alt="course image"
+                                    class="h-full w-full object-cover">
+                            </div>
+
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="p-4">
+                                    <div class="flex items-start justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-[#FFF4E5] px-2 py-1 text-[10px] font-medium uppercase text-[#C8811A]">
+                                            Productivity
+                                        </span>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <span class="text-[16px] font-semibold text-[#1D2026]">$14.00</span>
+                                            <span class="text-[12px] text-[#A1A5B3] line-through">$26.00</span>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="mt-3 text-[15px] leading-[22px] text-[#FF6636]">
+                                        Adobe XD for Web Design: Essential Principles
+                                    </h3>
+
+                                    <div class="mt-3 flex items-center justify-between gap-3">
+                                        <div class="flex min-w-0 items-center gap-2">
+                                            <img src="./images/Photo.png" alt="author"
+                                                class="h-7 w-7 rounded-full object-cover">
+                                            <span class="whitespace-nowrap text-[13px] text-[#4E5566]">Kevin
+                                                Gilbert</span>
+                                        </div>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <img src="./images/Vector(2).png" alt="star" class="h-4 w-4">
+                                            <span class="text-[13px] text-[#1D2026]">5.0</span>
+                                            <span class="text-[13px] text-[#8C94A3]">(357,914)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center gap-4 border-t border-[#E9EAF0] px-4 py-3 text-[13px] text-[#4E5566]">
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/User(1).png" alt="user icon" class="h-4 w-4">
+                                        <span>265.7K students</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/chart.png" alt="level icon" class="h-4 w-4">
+                                        <span>Beginner</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/Clock.png" alt="clock icon" class="h-4 w-4">
+                                        <span>6 hour</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="overflow-hidden border border-gray-300 bg-white">
+                        <div class="flex">
+                            <div class="w-[170px] shrink-0">
+                                <img src="./images/Course Images(6).png" alt="course image"
+                                    class="h-full w-full object-cover">
+                            </div>
+
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="p-4">
+                                    <div class="flex items-start justify-between gap-3">
+                                        <span
+                                            class="inline-block bg-[#FFF4E5] px-2 py-1 text-[10px] font-medium uppercase text-[#C8811A]">
+                                            Music
+                                        </span>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <span class="text-[16px] font-semibold text-[#1D2026]">$14.00</span>
+                                            <span class="text-[12px] text-[#A1A5B3] line-through">$26.00</span>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="mt-3 text-[15px] leading-[22px] text-[#1D2026]">
+                                        The Python Mega Course: Build 10 Real World ...
+                                    </h3>
+
+                                    <div class="mt-3 flex items-center justify-between gap-3">
+                                        <div class="flex min-w-0 items-center gap-2">
+                                            <img src="./images/Photo.png" alt="author"
+                                                class="h-7 w-7 rounded-full object-cover">
+                                            <span class="whitespace-nowrap text-[13px] text-[#4E5566]">Kevin
+                                                Gilbert</span>
+                                        </div>
+
+                                        <div class="flex shrink-0 items-center gap-1">
+                                            <img src="./images/Vector(2).png" alt="star" class="h-4 w-4">
+                                            <span class="text-[13px] text-[#1D2026]">5.0</span>
+                                            <span class="text-[13px] text-[#8C94A3]">(357,914)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center gap-4 border-t border-[#E9EAF0] px-4 py-3 text-[13px] text-[#4E5566]">
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/User(1).png" alt="user icon" class="h-4 w-4">
+                                        <span>265.7K students</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/chart.png" alt="level icon" class="h-4 w-4">
+                                        <span>Beginner</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-1">
+                                        <img src="./images/Clock.png" alt="clock icon" class="h-4 w-4">
+                                        <span>6 hour</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="pt-[448px] ">
+            <div class="mx-auto max-w-6xl px-4">
+
+                <!-- Title -->
+                <h2 class="text-center text-3xl font-extrabold text-slate-900">
+                    Browse top category
+                </h2>
+
+                <!-- Cards -->
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-10">
+
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow p-4 space-y-4">
+
+                        <div class="flex justify-center">
+                            <img src="./images/Course Images(12).png" alt="course image">
+                        </div>
+
+                        <div class="space-y-3 font-semibold text-slate-900">
+
+                            <div class="flex justify-between">
+                                <span
+                                    class="bg-oronge-primary px-2 py-1 rounded text-oronge-700 text-[10px] font-inter font-medium">Design</span>
+                                <span class="text-orange-500">$57</span>
+                            </div>
+
+                            <p class="text-left">
+                                The Python Mega Course: Build 10 Real World Applications
+                            </p>
+
+                            <div class="flex justify-between text-sm text-slate-500 border-t pt-3">
+                                <div class="flex gap-2 items-center">
+                                    <img src="./images/Vector(2).png" alt="vector-star">
+                                    <span>5.0</span>
+                                </div>
+
+                                <span>265.7K students</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="bg-white rounded-lg shadow p-4 space-y-4">
+                        <div class="flex justify-center">
+                            <img src="./images/Course Images(4).png" alt="course image">
+                        </div>
+
+                        <div class="space-y-3 font-semibold text-slate-900">
+                            <div class="flex justify-between">
+                                <span
+                                    class="bg-error px-2 py-1 rounded text-green text-[10px] font-inter font-medium">IT
+                                    & Software</span>
+                                <span class="text-orange-500">$57</span>
+                            </div>
+
+                            <p>Facebook Ads & Facebook Marketing MASTERY 2021 Cours...</p>
+
+                            <div class="flex justify-between text-sm text-slate-500 border-t pt-3">
+                                <div class="flex gap-2 items-center">
+                                    <img src="./images/Vector(2).png" alt="vector-star">
+                                    <span>5.0</span>
+                                </div>
+
+                                <span>265.7K students</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow p-4 space-y-4">
+                        <div class="flex justify-center">
+                            <img src="./images/Course Images(11).png" alt="course image">
+                        </div>
+
+                        <div class="space-y-3 font-semibold text-slate-900">
+                            <div class="flex justify-between">
+                                <span
+                                    class="bg-secondary px-2 py-1 rounded text-blue text-[10px] font-inter font-medium">Developments</span>
+                                <span class="text-orange-500">$57</span>
+                            </div>
+
+                            <p>2021 Complete Python Bootcamp From Zero to Hero in Python</p>
+
+                            <div class="flex justify-between text-sm text-slate-500 border-t pt-3">
+                                <div class="flex gap-2 items-center">
+                                    <img src="./images/Vector(2).png" alt="vector-star">
+                                    <span>5.0</span>
+                                </div>
+
+                                <span>265.7K students</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4-->
+                    <div class="bg-white rounded-lg shadow p-4 space-y-4">
+                        <div class="flex justify-center">
+                            <img src="./images/Course Images(10).png" alt="image-course">
+                        </div>
+
+                        <div class="space-y-3 font-semibold text-slate-900">
+                            <div class="flex justify-between">
+                                <span
+                                    class="bg-secondary px-2 py-1 rounded text-blue text-[10px] font-inter font-medium">Marketing</span>
+                                <span class="text-orange-500">$57</span>
+                            </div>
+
+                            <p>How to get Diamond in soloQ | League of Legends | Season 11</p>
+
+                            <div class="flex justify-between text-sm text-slate-500 border-t pt-3">
+                                <div class="flex gap-2 items-center">
+                                    <img src="./images/Vector(2).png" alt="vector-star">
+                                    <span>5.0</span>
+                                </div>
+
+                                <span>265.7K students</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-center gap-[12px] items-center bg-oronge-primary w-fit px-[24px] py-[12px] mx-auto my-[40px]">
+                    <button class="text-oronge">Create Account</button>
+                    <img src="./images/ArrowRight.png" alt="right-buton">
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto pt-[80.5px] pb-[320px]  bg-[#F5F7FA]">
+
+            <div class="max-w-6xl mx-auto px-4">
+
+                <div class="flex justify-center gap-[24px]">
+
+                    <!-- LEFT CARD -->
+                    <div
+                        class="flex justify-between bg-gradient-to-l from-[#FF6636] to-[#CC522B] px-[40px] pt-[40px] pb-[40px] rounded max-w-[600px]">
+
+                        <div class="max-w-[360px] text-white">
+                            <h2 class="text-[32px] font-semibold leading-[120%] whitespace-nowrap">
+                                Become an instructor
+                            </h2>
+
+                            <p class="text-[16px] leading-[26px]">
+                                Instructors from around the world teach millions of students on Udemy.
+                                We provide the tools and skills to teach what you love.
+                            </p>
+
+                            <button
+                                class="flex items-center gap-3 bg-white px-[20px] py-[12px] text-[16px] font-semibold text-[#FF6636] mt-[20px]">
+                                Start Teaching
+                                <img src="./images/ArrowRight.png">
+                            </button>
+                        </div>
+
+                        <img src="./images/Become an Instructor.png" class="w-[200px] object-contain">
+                    </div>
+
+
+                    <!-- RIGHT STEPS -->
+                    <div class="max-w-[648px]  ml-[20px] bg-[#FFFFFF]">
+
+                        <h3 class="text-xl m-[40px] font-semibold mb-[24px]">
+                            Your teaching & earning steps
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-[20px] mx-[40px]">
+
+                            <div class="flex items-center gap-[16px]">
+                                <div
+                                    class="w-[52px] h-[52px] bg-[#EBEBFF] rounded-full flex items-center justify-center">
+                                    <span class="text-[24px] text-[#564FFD] font-semibold">1</span>
+                                </div>
+                                <p>Apply to become instructor</p>
+                            </div>
+
+                            <div class="flex items-center gap-[16px]">
+                                <div
+                                    class="w-[52px] h-[52px] bg-[#FFF0F0] rounded-full flex items-center justify-center">
+                                    <span class="text-[24px] text-[#FF6636] font-semibold">2</span>
+                                </div>
+                                <p>Setup your profile</p>
+                            </div>
+
+                            <div class="flex items-center gap-[16px]">
+                                <div
+                                    class="w-[52px] h-[52px] bg-[#FFF0F0] rounded-full flex items-center justify-center">
+                                    <span class="text-[24px] text-[#E34444] font-semibold">3</span>
+                                </div>
+                                <p>Create your course</p>
+                            </div>
+
+                            <div class="flex items-center gap-[16px]">
+                                <div
+                                    class="w-[52px] h-[52px] bg-[#E1F7E3] rounded-full flex items-center justify-center">
+                                    <span class="text-[24px] text-[#23BD33] font-semibold">4</span>
+                                </div>
+                                <p>Start teaching</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="container relative mx-auto py-[64px]">
+
+            <div
+                class="absolute top-[-220px] left-1/2 -translate-x-1/2 w-full max-w-6xl border border-gray-300 bg-white py-[60px]">
+
+                <!-- heading -->
+                <div class="text-center pb-[40px]">
+                    <h2 class="text-[40px] font-semibold text-black">
+                        Top instructor of the month
+                    </h2>
+                </div>
+
+                <!-- cards -->
+                <div class="grid grid-cols-5 gap-6 px-[60px]">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm p-5">
+                        <img src="./images/Image.png" alt="image-card-1" class="w-full h-auto object-cover">
+
+                        <div class="text-center mt-4">
+                            <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                            <span class="text-[14px] text-[#8C94A3] font-normal">Senior Developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between border-t pt-4 mt-4 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <img src="./images/Vector(2).png" alt="vector-star">
+                                <span>4.6</span>
+                            </div>
+                            <span class="whitespace-nowrap">854 students</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm p-5">
+                        <img src="./images/Image(1).png" alt="course image" class="w-full h-auto object-cover">
+
+                        <div class="text-center mt-4">
+                            <h6 class="text-[20px] font-semibold text-[#1D2026]">Darrell Steward</h6>
+                            <span class="text-[14px] text-[#8C94A3] font-normal">Digital Product Designer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between border-t pt-4 mt-4 text-sm text-slate-500">
+                            <div class="flex items-center mr-[28px] gap-2">
+                                <img src="./images/Vector(2).png" alt="vector-star">
+                                <span>4.9</span>
+                            </div>
+                            <span class="whitespace-nowrap">451,444 students</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm p-5">
+                        <img src="./images/Image(2).png" alt="course image" class="w-full h-auto object-cover">
+
+                        <div class="text-center mt-4">
+                            <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                            <span class="text-[14px] text-[#8C94A3] font-normal">Senior Developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between border-t pt-4 mt-4 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <img src="./images/Vector(2).png" alt="vector-star">
+                                <span>4.6</span>
+                            </div>
+                            <span class="whitespace-nowrap">854 students</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm p-5">
+                        <img src="./images/Image(3).png" alt="course image" class="w-full h-auto object-cover">
+
+                        <div class="text-center mt-4">
+                            <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                            <span class="text-[14px] text-[#8C94A3] font-normal">Senior Developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between border-t pt-4 mt-4 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <img src="./images/Vector(2).png" alt="vector-star">
+                                <span>4.6</span>
+                            </div>
+                            <span class="whitespace-nowrap">854 students</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm p-5">
+                        <img src="./images/Image(4).png" alt="image-course" class="w-full h-auto object-cover">
+
+                        <div class="text-center mt-4">
+                            <h6 class="text-[20px] font-semibold text-[#1D2026]">Devon Lane</h6>
+                            <span class="text-[14px] text-[#8C94A3] font-normal">Senior Developer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between border-t pt-4 mt-4 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <img src="./images/Vector(2).png" alt="vector-star">
+                                <span>4.6</span>
+                            </div>
+                            <span class="whitespace-nowrap">854 students</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-[45px] flex items-center text-center justify-center gap-2 text-sm">
+                    <span class="text-slate-500">Thousands of students waiting for a instructor. Start teaching &
+                        earning now!.</span>
+                    <a href="#" class="font-semibold text-orange-500 hover:text-orange-600">
+                        Become Instructor
+                    </a>
+                    <img src="./images/ArrowRight.png" alt="right-buton">
+                </div>
+
+            </div>
+
+        </section>
+        <section class="bg-white py-16 mt-[350px]">
+            <div class="mx-auto max-w-6xl px-4">
+                <div class="grid items-center gap-10 lg:grid-cols-[320px_1fr]">
+
+                    <!-- Left text -->
+                    <div>
+                        <h2 class="text-[32px] font-semibold leading-[120%] text-[#1D2026]">
+                            6.3k trusted companies
+                        </h2>
+                        <p class="mt-4 max-w-[260px] text-[14px] leading-[22px] text-[#6E7485]">
+                            Nullam egestas tellus at enim ornare tristique. Class aptent taciti sociosqu ad litora
+                            torquent per conubia nostra.
+                        </p>
+                    </div>
+
+                    <!-- Logo grid -->
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(3).png" alt="Netflix">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group.png" alt="youtub">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 5.png" alt="Google">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(4).png" alt="lenovo">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 6.png" alt="slack">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Vector(5).png" alt="verizon">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 8.png" alt="lexmark">
+                        </div>
+
+                        <div class="flex h-[84px] items-center justify-center border border-[#E9EAF0] bg-white">
+                            <img src="./images/Group 7.png" alt="microsoft">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#111827] text-white">
+        <div class="mx-auto max-w-6xl px-4">
+
+            <!-- Top CTA -->
+            <div class="grid gap-10 border-b border-white/10 py-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+
+                <div>
+                    <h2
+                        class="max-w-[524px] text-[40px] font-semibold font-inter leading-[48px] tracking-[-1%] text-[#FFFFFF]">
+                        Start learning with 67.1k students around the world.
+                    </h2>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <button
+                            class="bg-[#FF6636] px-[24px] py-4 text-[16px] leading-[-0.8%] tracking-[-0.8%] font-semibold text-white">
+                            Join The Family
+                        </button>
+
+                        <button class="bg-white/10 px-6 py-4 text-[16px] font-semibold text-white">
+                            Browse All Courses
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">6.3k</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Online courses</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">26k</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Certified Instructor</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[40px] font-semibold leading-none text-white">99.9%</h3>
+                        <p class="mt-3 text-[14px] text-[#8C94A3]">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main footer -->
+            <div class="grid gap-10 border-b border-white/10 py-16 md:grid-cols-2 lg:grid-cols-5">
+
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <img src="./images/logo.png" alt="logo" class="h-8 w-8 object-contain">
+                        <h3 class="text-[32px] font-semibold text-white">E-tutor</h3>
+                    </div>
+
+                    <p class="mt-5 max-w-[260px] text-[14px] leading-[22px] text-[#8C94A3]">
+                        Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec mattis odio at.
+                    </p>
+
+                    <!-- Social -->
+                    <div class="mt-6 flex gap-3">
+                        <a href="#facebook" class="flex h-[46px] w-[46px] items-center justify-center bg-white/10"><img
+                                src="./images/Frame 75.png" alt="Facebook"></a>
+                        <a href="#Instagram"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Instragarm.png" alt="Instagram"></a>
+                        <a href="#linkedin"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-[#FF6636] text-sm text-white"><img
+                                src="./images/Linkedin.png" alt="linkedin"></a>
+                        <a href="#X"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white"><img
+                                src="./images/Twitter.png" alt="X"></a>
+                        <a href="#Youtub"
+                            class="flex h-[46px] w-[46px] items-center justify-center bg-white/10 text-sm text-white">
+                            <img src="./images/Frame 74.png" alt="Youtub"></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Top 4 Category
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Development</a></li>
+                        <li><a href="#" class="hover:text-white">Finance & Accounting</a></li>
+                        <li><a href="#" class="hover:text-white">Design</a></li>
+                        <li><a href="#" class="hover:text-white">Business</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Quick Links
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li class="flex justify-between items-center gap-2 border-b border-[#FF6636] px-2 py-1">
+                            <a href="#" class="text-white">Become Instructor</a>
+                            <span><img src="./images/ArrowRight(1).png" alt="arrow-right"></span>
+                        </li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Support
+                    </h4>
+
+                    <ul class="mt-5 space-y-3 text-[14px] text-[#8C94A3]">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Condition</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- App buttons -->
+                <div>
+                    <h4 class="text-[12px] font-semibold uppercase tracking-[0.08em] text-white">
+                        Download Our App
+                    </h4>
+
+                    <div class="mt-5 space-y-4">
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/apple 1.png" alt="apple" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">App Store</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 bg-white/10 px-4 py-3">
+                            <img src="./images/google-play-5 1.png" alt="playstore" class="h-8 w-8 object-contain">
+                            <div>
+                                <p class="text-[11px] text-[#8C94A3]">Download on the</p>
+                                <p class="text-[15px] font-medium text-white">Play Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom footer -->
+            <div class="flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between">
+                <p class="text-[14px] text-[#8C94A3]">
+                    &copy; 2021 - Eduflex. Designed by Templatecookie. All rights reserved
+                </p>
+
+                <div
+                    class="flex items-center justify-between border border-white/10 px-4 py-3 text-[14px] text-[#8C94A3] md:w-[160px]">
+                    <span>English</span>
+                    <img src="./images/Vector(1).png" alt="vector">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
